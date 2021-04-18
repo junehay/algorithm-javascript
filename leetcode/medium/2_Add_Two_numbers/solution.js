@@ -14,6 +14,7 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
+
 const addTwoNumbers = (l1, l2) => {
   let a = l1;
   let b = l2;
@@ -56,3 +57,13 @@ ListNode.prototype.add = function (value) {
 
   return addNode;
 };
+
+// example
+function ListNode(val, next) {
+  this.val = val === undefined ? 0 : val;
+  this.next = next === undefined ? null : next;
+}
+
+const l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+const l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+console.log(addTwoNumbers(l1, l2));
